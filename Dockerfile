@@ -1,2 +1,2 @@
 FROM yujmo/archbase
-RUN yaourt -S python-pip --noconfirm &&	pip install numpy && pip install scipy && pip install matplotlib && pip install scikit-learn
+RUN wget https://repo.continuum.io/archive/Anaconda3-5.0.0.1-Linux-x86_64.sh |bash Ana*

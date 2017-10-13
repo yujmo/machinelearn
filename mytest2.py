@@ -6,7 +6,7 @@ m,n = shape(dist)
 fig = plt.figure() 
 # 绘图 
 ax = fig.add_subplot(111) 
-ax.scatter(dist.T[0],dist.T[1],c='blue',marker='o') # 问题在这句 
+ax.scatter(list(dist.T[0]),list(dist.T[1]),c='blue',marker='o') # 问题在这句 
 for point in dist.tolist(): 
   plt.annotate("("+str(point[0])+", "+str(point[1])+")",xy = (point[0],point[1])) 
 xlist = []

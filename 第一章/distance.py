@@ -43,5 +43,11 @@ print(corref)
 
 print(corrcoef(featuremat))
 
+vectormat = mat([[1,2,3],[4,5,6]])
+v12 = vectormat[0] - vectormat[1]
+print(sqrt(v12 * v12.T))
 
-
+varmat = std(vectormat.T,axis = 0)
+normvmat = (vectormat - mean(vectormat)) / varmat.T
+normv12 = normvmat[0] - normvmat[1]
+print(sqrt(normv12*normv12.T))

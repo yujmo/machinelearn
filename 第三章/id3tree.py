@@ -9,4 +9,6 @@ class ID3DTree(object):
         self.dataSet = []
         self.labels = []
     def loadDataSet(self,path,labels):
+        with open(path) as fp:
+            content = fp.read()
 

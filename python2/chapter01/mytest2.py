@@ -1,17 +1,15 @@
 # -*- coding: utf-8 -*-
-
-import sys  
-import os
-import time
-
-# ÅäÖÃutf-8Êä³ö»·¾³
-reload(sys)
-sys.setdefaultencoding('utf-8')
-
-mylist = [1,2,3,4,5]
-length = len(mylist)
-a = 10
-for indx in xrange(length):
+import numpy as np 
+#---------------------------------------------
+mylist,a = [1,2,3,4,5],10
+for indx in range(len(mylist)):
 	mylist[indx] = a*mylist[indx]
-print mylist
+print(mylist)
+#---------------------------------------------
+
+#---------------------------------------------
+mylist,a = [1,2,3,4,5],10
+mymatrix = np.mat(mylist)
+print(a*mymatrix)
+#---------------------------------------------
 

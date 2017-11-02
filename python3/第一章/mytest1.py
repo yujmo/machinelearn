@@ -9,7 +9,6 @@ dataMat = mat(dataSet).T
 
 #绘制数据集散点图
 plt.scatter(list(dataMat[0]),list(dataMat[1]),c='red',marker='o')
-
 X = np.linspace(-2,2,100)
 Y = 2.8 * X + 9 
 plt.plot(X,Y)

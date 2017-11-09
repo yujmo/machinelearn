@@ -5,12 +5,13 @@ import time
 import numpy as np
 from Recommand_Lib import *
 from sklearn.cluster import KMeans
-import matplotlib.pyplot as plt 
+import matplotlib.pyplot as plt
+import os
 
 k = 4
-dataSet = file2matrix("testData/4k2_far.txt","\t")  
+dataSet = file2matrix(os.getcwd()+"/testdata/test.txt","\t")
 dataMat = mat(dataSet[:,1:]) # 转换为矩阵形式
-	
+
 kmeans = KMeans(init='k-means++', n_clusters=4)
 kmeans.fit(dataMat)
 
@@ -18,7 +19,7 @@ kmeans.fit(dataMat)
 drawScatter(plt,dataMat,size=20,color='b',mrkr='.')
 # 绘制聚类中心
 drawScatter(plt,kmeans.cluster_centers_,size=60,color='red',mrkr='D')
-plt.show() 
+plt.show()
 '''
 colors = ['r', 'b', 'g','black']
 for k , col in zip( range(k) , colors):

@@ -30,8 +30,6 @@ def main():
     output = sess.run(y_conv2 , feed_dict={input_x:x_img})    
     print 'the predict is %d' % (np.argmax(output))   
 
-
-
     sess.close()   
 
 if __name__ == '__main__':    

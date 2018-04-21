@@ -60,7 +60,7 @@ tf.add_to_collection('res', y_conv)
 tf.add_to_collection('output', y_conv2)  
 tf.add_to_collection('x', x)  
 
-for i in range(200):  
+for i in range(200000):  
   batch = mnist.train.next_batch(50)  
   if i%100 == 0:  
     train_accuracy = accuracy.eval(feed_dict={  
